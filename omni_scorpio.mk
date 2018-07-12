@@ -1,6 +1,9 @@
 $(call inherit-product, device/xiaomi/scorpio/full_scorpio.mk)
 
-# Inherit some common AEX stuff.
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
